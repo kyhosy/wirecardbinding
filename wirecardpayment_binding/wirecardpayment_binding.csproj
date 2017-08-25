@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C2C3E0B5-7587-4F19-A4D6-5AADF47F0F8E}</ProjectGuid>
+    <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>wirecardpayment_binding</RootNamespace>
+    <AssemblyName>wirecardpayment_binding</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingCoreSource Include="Structs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <NativeReference Include="PaymentSDK.framework">
+      <Kind>Framework</Kind>
+      <Frameworks>Foundation UIKit PassKit AddressBook Security</Frameworks>
+      <LinkerFlags>-lxml2</LinkerFlags>
+    </NativeReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="PaymentSDKResources.bundle\Assets.car" />
+    <BundleResource Include="PaymentSDKResources.bundle\Info.plist" />
+    <BundleResource Include="PaymentSDKResources.bundle\WDCardPaymentAnimationVC.nib" />
+    <BundleResource Include="PaymentSDKResources.bundle\WDCardPaymentVC.nib" />
+    <BundleResource Include="PaymentSDKResources.bundle\WDCardScanVC.nib" />
+    <BundleResource Include="PaymentSDKResources.bundle\WDOTPCodeVC.nib" />
+    <BundleResource Include="PaymentSDKResources.bundle\WDSEPAPaymentVC.nib" />
+    <BundleResource Include="PaymentSDKResources.bundle\WDUIWebPaymentVC.nib" />
+    <BundleResource Include="PaymentSDKResources.bundle\WDWKWebPaymentVC.nib" />
+    <BundleResource Include="PaymentSDKResources.bundle\ocra.ttf" />
+    <BundleResource Include="PaymentSDKResources.bundle\Base.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\american_express%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\american_express_gold%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\american_express_green%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\american_express_platinum%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\china_unionpay%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\credit_cards%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\diners_club%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\discover%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\jcb%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\maestro%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\mastercard%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\mastercard_gold%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\mastercard_platinum%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\mir%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\security_code_amex%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\security_code_unknown%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\uatp%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\unknown%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\uzcard%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\visa%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\visa_credit%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\visa_debit%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\visa_electron%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\visa_gold%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\visa_platinum%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\visa_standard%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\CardImages\credit-card-back-defined.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\CardImages\credit-card-front-defined.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\CardImages\unknownImageBack.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\CardImages\unknownImageFront.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\CardLogos\amexLogo%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\CardLogos\cupLogo%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\CardLogos\dinersLogo%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\CardLogos\discoverLogo%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\CardLogos\jcbLogo%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\CardLogos\maestroLogo%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\CardLogos\mastercardLogo%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\CardLogos\mirLogo%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\CardLogos\uatpLogo%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\CardLogos\unknownLogo%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\CardLogos\uzcardLogo%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\PaymentMethods\CardLogos\visaLogo%402x.png" />
+    <BundleResource Include="PaymentSDKResources.bundle\af.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\ar.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\az.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\be.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\bg.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\bn.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\ca.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\cs.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\cy.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\da.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\de.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\el.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\en.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\eo.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\es.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\et.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\eu.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\fa.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\fi.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\fil.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\fr.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\ga.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\gl.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\gu.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\he.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\hi.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\hr.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\ht.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\hu.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\hy.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\id.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\is.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\it.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\ja.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\ka.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\kn.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\ko.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\la.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\lt.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\lv.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\mk.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\ms.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\mt.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\nb.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\nl.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\pl.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\pt.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\ro.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\ru.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\sk.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\sl.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\sq.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\sr.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\sv.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\sw.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\ta.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\te.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\th.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\tr.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\uk.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\ur.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\vi.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\yi.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\zh-Hans.lproj\Localizable.strings" />
+    <BundleResource Include="PaymentSDKResources.bundle\zh-Hant.lproj\Localizable.strings" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
+</Project>

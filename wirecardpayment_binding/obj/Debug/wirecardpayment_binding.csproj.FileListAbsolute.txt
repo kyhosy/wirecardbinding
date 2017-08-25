@@ -1,0 +1,5 @@
+/Users/ky.ho/Projects/wirecardpayment_binding/wirecardpayment_binding/bin/Debug/wirecardpayment_binding.dll
+/Users/ky.ho/Projects/wirecardpayment_binding/wirecardpayment_binding/bin/Debug/wirecardpayment_binding.pdb
+/Users/ky.ho/Projects/wirecardpayment_binding/wirecardpayment_binding/obj/Debug/wirecardpayment_binding.csproj.CoreCompileInputs.cache
+/Users/ky.ho/Projects/wirecardpayment_binding/wirecardpayment_binding/obj/Debug/wirecardpayment_binding.dll
+/Users/ky.ho/Projects/wirecardpayment_binding/wirecardpayment_binding/obj/Debug/wirecardpayment_binding.pdb
